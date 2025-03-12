@@ -34,6 +34,7 @@ boxes.forEach((box) => {
     box.addEventListener("click", () => {
         count++;
         box.innerText = turnO ? "O" : "X";
+        box.style.color = turnO ? "#FF00FF" : "#00FFFF"; 
         turnO = !turnO;
         box.disabled = true;
         checkWinner();
