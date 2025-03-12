@@ -1,17 +1,23 @@
 /* Resetting default margin and padding */
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Styling the body */
-body{
-    background-color: #548587;
+body {
+    background-color: #0D0221; /* Deep indigo */
     text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    color: #F2059F; /* Hot pink */
 }
 
 /* Centering the game container */
-.container{
+.container {
     height: 70vh;
     display: flex;
     justify-content: center;
@@ -19,7 +25,7 @@ body{
 }
 
 /* Styling the game board */
-.game{
+.game {
     height: 60vmin;
     width: 60vmin;
     display: flex;
@@ -30,44 +36,49 @@ body{
 }
 
 /* Styling each tic-tac-toe box */
-.box{
+.box {
     height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
-    border: none;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    border: 2px solid #04D9D9; /* Retro teal */
+    box-shadow: 0 0 1rem rgba(242, 5, 159, 0.5); /* Hot pink glow */
     font-size: 8vmin;
-    color: #b0413e;
-    background-color: #ffffc7;
+    background-color: #261447; /* Dark purple */
+    color: #F2E863; /* Retro yellow */
+    cursor: pointer;
 }
 
 /* Styling buttons */
 #reset-btn, #new-btn {
     padding: 1rem;
     font-size: 1.25rem;
-    background-color: #191913;
-    color: #ffffff;
-    border: none;
+    color: #0D0221; /* Deep indigo text */
+    background-color: #F2059F; /* Hot pink */
+    border: 2px solid #04D9D9; /* Retro teal border */
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgba(4, 217, 217, 0.5); /* Retro teal glow */
 }
 
 /* Styling the message display */
-.msg{
-    color: #ffffc7;
+.msg, .draw {
+    color: #F2E863; /* Retro yellow */
     font-size: 8vmin;
+    text-shadow: 0 0 1rem #F2059F; /* Hot pink glow */
 }
 
 /* Styling the message container */
-.msg-container{
-    height: 100vmin;
+.msg-container {
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2rem; 
+    gap: 2rem;
 }
 
 /* Hide elements when needed */
-.hide{
+.hide {
     display: none;
 }
