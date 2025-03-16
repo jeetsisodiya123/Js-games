@@ -1,22 +1,29 @@
-/* Resetting default margin and padding */
+/* styles.css */
+
+/* Resetting default margin, padding, and ensuring box-sizing for consistent layouts */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Styling the body */
+/* Styling the body with a retro-futuristic theme */
 body {
-    background-color: #0D0221; /* Deep indigo */
+    background-color: #0D0221; /* Deep indigo background */
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh; /* Ensure full viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    color: #fff; /* Default text color for better contrast */
 }
 
+/* Styling paragraph text with a neon effect */
 p {
     color: #F2059F; /* Hot pink */
+    text-shadow: 0 0 0.5rem rgba(242, 5, 159, 0.7); /* Subtle neon glow */
 }
 
-/* Centering the game container */
+/* Centering the game container vertically and horizontally */
 .container {
     height: 70vh;
     display: flex;
@@ -24,7 +31,7 @@ p {
     align-items: center;
 }
 
-/* Styling the game board */
+/* Styling the game board with a grid layout */
 .game {
     height: 60vmin;
     width: 60vmin;
@@ -33,38 +40,72 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1.5vmin;
+    background-color: rgba(38, 20, 71, 0.5); /* Semi-transparent dark purple */
+    border-radius: 1rem;
+    padding: 1vmin;
+    box-shadow: 0 0 2rem rgba(4, 217, 217, 0.3); /* Subtle teal glow around board */
 }
 
-/* Styling each tic-tac-toe box */
+/* Styling each tic-tac-toe box with neon effects */
 .box {
     height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
-    border: 2px solid #04D9D9; /* Retro teal */
+    border: 2px solid #04D9D9; /* Retro teal border */
     box-shadow: 0 0 1rem rgba(242, 5, 159, 0.5); /* Hot pink glow */
     font-size: 8vmin;
-    background-color: #261447; /* Dark purple */
-    color: #F2E863; /* Retro yellow */
+    background-color: #261447; /* Dark purple background */
+    color: #F2E863; /* Retro yellow text */
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
 }
 
-/* Styling buttons */
+/* Hover effect for tic-tac-toe boxes */
+.box:hover {
+    background-color: #3a1f6b; /* Slightly lighter purple */
+    box-shadow: 0 0 1.5rem rgba(242, 5, 159, 0.8); /* Brighter hot pink glow */
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+/* Styling buttons with a neon retro look */
 #reset-btn, #new-btn {
-    padding: 1rem;
+    padding: 1rem 2rem;
     font-size: 1.25rem;
     color: #0D0221; /* Deep indigo text */
-    background-color: #F2059F; /* Hot pink */
+    background-color: #F2059F; /* Hot pink background */
     border: 2px solid #04D9D9; /* Retro teal border */
     border-radius: 0.5rem;
     cursor: pointer;
     box-shadow: 0 0 1rem rgba(4, 217, 217, 0.5); /* Retro teal glow */
+    transition: all 0.3s ease; /* Smooth transitions */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Styling the message display */
+/* Button hover effects */
+#reset-btn:hover, #new-btn:hover {
+    background-color: #ff33b3; /* Brighter hot pink */
+    box-shadow: 0 0 1.5rem rgba(4, 217, 217, 0.8); /* Brighter teal glow */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Button focus states for accessibility */
+#reset-btn:focus, #new-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(242, 5, 159, 0.5); /* Hot pink focus ring */
+}
+
+/* Styling the message display with a neon effect */
 .msg, .draw {
     color: #F2E863; /* Retro yellow */
     font-size: 8vmin;
     text-shadow: 0 0 1rem #F2059F; /* Hot pink glow */
+    font-weight: bold;
+    animation: pulse 1.5s infinite alternate; /* Subtle pulsing effect */
 }
 
 /* Styling the message container */
@@ -76,9 +117,77 @@ p {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    background-color: rgba(13, 2, 33, 0.8); /* Semi-transparent deep indigo overlay */
 }
 
 /* Hide elements when needed */
 .hide {
     display: none;
+}
+
+/* Animation for message pulsing effect */
+@keyframes pulse {
+    from {
+        text-shadow: 0 0 1rem #F2059F;
+    }
+    to {
+        text-shadow: 0 0 1.5rem #F2059F, 0 0 2rem #F2059F;
+    }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .game {
+        height: 70vmin;
+        width: 70vmin;
+    }
+
+    .box {
+        height: 22vmin;
+        width: 22vmin;
+        font-size: 10vmin;
+    }
+
+    .msg, .draw {
+        font-size: 6vmin;
+    }
+
+    #reset-btn, #new-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game {
+        height: 80vmin;
+        width: 80vmin;
+    }
+
+    .box {
+        height: 25vmin;
+        width: 25vmin;
+        font-size: 12vmin;
+    }
+
+    .msg, .draw {
+        font-size: 5vmin;
+    }
+
+    #reset-btn, #new-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .msg-container {
+        gap: 1.5rem;
+    }
+}
+
+/* Accessibility: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .box, #reset-btn, #new-btn, .msg, .draw {
+        animation: none;
+        transition: none;
+    }
 }
