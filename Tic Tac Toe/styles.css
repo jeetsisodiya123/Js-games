@@ -1,4 +1,4 @@
-/* styles.css - Casual & Aesthetic Theme */
+/* styles.css - Casual Theme */
 
 /* Resetting default margin, padding, and ensuring box-sizing for consistent layouts */
 * {
@@ -7,26 +7,25 @@
     box-sizing: border-box;
 }
 
-/* Styling the body with a soft, casual aesthetic */
+/* Styling the body with a casual, relaxed look */
 body {
-    background: linear-gradient(135deg, #f9e2af, #d4a5a5); /* Soft pastel gradient */
+    background-color: #f0f4f8; /* Light gray-blue for a calm backdrop */
     text-align: center;
-    font-family: 'Poppins', sans-serif; /* Modern, friendly font */
+    font-family: 'Arial', sans-serif; /* Simple, widely available font */
     min-height: 100vh; /* Ensure full viewport height */
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    color: #4a4a4a; /* Dark gray text for readability */
+    color: #333; /* Dark gray text for readability */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Styling paragraph text with a subtle pastel effect */
+/* Styling paragraph text with a friendly tone */
 p {
-    color: #a16b7b; /* Muted pastel pink */
+    color: #666; /* Muted gray for a soft look */
     font-size: 1.2rem;
-    font-weight: 500;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-weight: normal;
 }
 
 /* Centering the game container vertically and horizontally */
@@ -38,7 +37,7 @@ p {
     padding: 1rem; /* Add padding for smaller screens */
 }
 
-/* Styling the game board with a clean, aesthetic look */
+/* Styling the game board with a clean, casual design */
 .game {
     height: 60vmin;
     width: 60vmin;
@@ -47,74 +46,68 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1.5vmin;
-    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white for a soft look */
-    border-radius: 1.5rem;
+    background-color: #fff; /* Clean white background */
+    border-radius: 1rem;
     padding: 1vmin;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    backdrop-filter: blur(8px); /* Glassmorphism effect */
-    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Styling each tic-tac-toe box with a playful, rounded design */
+/* Styling each tic-tac-toe box with a simple, friendly design */
 .box {
     height: 18vmin;
     width: 18vmin;
-    border-radius: 1rem;
-    border: none;
-    background: #fff; /* Clean white background */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 0.5rem;
+    border: 2px solid #ddd; /* Light gray border */
+    background-color: #f9f9f9; /* Very light gray background */
     font-size: 8vmin;
-    color: #6b7280; /* Muted gray for X/O */
+    color: #555; /* Muted gray for X/O */
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover */
 }
 
 /* Hover effect for tic-tac-toe boxes */
 .box:hover {
-    background: #f9e2af; /* Soft pastel yellow on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
-    transform: translateY(-2px); /* Subtle lift effect */
+    background-color: #e6f0fa; /* Light blue on hover for a friendly touch */
+    transform: scale(1.05); /* Subtle scale-up on hover */
 }
 
-/* Styling buttons with a playful, pastel look */
+/* Styling buttons with a casual, approachable look */
 #reset-btn, #new-btn {
     padding: 1rem 2rem;
     font-size: 1.25rem;
     color: #fff; /* White text */
-    background: #a16b7b; /* Muted pastel pink */
+    background-color: #6b7280; /* Muted gray-blue for buttons */
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: all 0.3s ease; /* Smooth transitions */
-    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 /* Button hover effects */
 #reset-btn:hover, #new-btn:hover {
-    background: #d4a5a5; /* Lighter pastel pink */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
-    transform: translateY(-3px); /* Slight lift effect */
+    background-color: #4b5563; /* Darker gray-blue */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Button focus states for accessibility */
 #reset-btn:focus, #new-btn:focus {
     outline: none;
-    box-shadow: 0 0 0 4px rgba(161, 107, 123, 0.5); /* Pastel pink focus ring */
+    box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.5); /* Gray-blue focus ring */
 }
 
-/* Styling the message display with a playful, aesthetic effect */
+/* Styling the message display with a simple, friendly effect */
 .msg, .draw {
-    color: #6b7280; /* Muted gray */
+    color: #333; /* Dark gray for readability */
     font-size: 8vmin;
-    font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation */
+    font-weight: bold;
+    margin-bottom: 1rem; /* Add spacing below message */
 }
 
 /* Styling the message container */
@@ -126,26 +119,12 @@ p {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
-    backdrop-filter: blur(5px); /* Glassmorphism effect */
-    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    background-color: #f0f4f8; /* Match body background */
 }
 
 /* Hide elements when needed */
 .hide {
     display: none;
-}
-
-/* Animation for message fade-in effect */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Responsive design adjustments */
@@ -199,21 +178,20 @@ p {
 
 /* Accessibility: Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
-    .box, #reset-btn, #new-btn, .msg, .draw {
-        animation: none;
+    .box, #reset-btn, #new-btn {
         transition: none;
     }
 }
 
 /* No JavaScript fallback styling */
 noscript {
-    background: #d4a5a5; /* Pastel pink background */
-    color: #fff; /* White text */
+    background: #e6f0fa; /* Light blue background */
+    color: #333; /* Dark gray text */
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     margin: 1rem;
     text-align: center;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
